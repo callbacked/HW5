@@ -119,19 +119,19 @@ https://www.geeksforgeeks.org/how-to-append-html-code-to-a-div-using-javascript/
         resetGame(); // Reset the game
     });
 
-    $("#newRound").click(function () {
-        newRound(); // Start a new round
+    $("#newWord").click(function () {
+        newWord(); // Start a new round
     });
 
     // Function to reset the game
     function resetGame() {
         score = 0; // Reset score
         updateScore(0); // Update score display
-        newRound(); // Start a new round
+        newWord(); // Start a new round (a.k.a a new round)
     }
 
     // Function to start a new round
-    function newRound() {
+    function newWord() {
         $("#moves").empty();
         $(".tile").remove();
         refreshRack();
