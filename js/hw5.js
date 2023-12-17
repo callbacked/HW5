@@ -127,7 +127,7 @@ https://www.geeksforgeeks.org/how-to-append-html-code-to-a-div-using-javascript/
     function resetGame() {
         score = 0; // Reset score
         updateScore(0); // Update score display
-        newWord(); // Start a new round (a.k.a a new round)
+        newWord(); // Start a new round (a.k.a: a new word)
     }
 
     // Function to start a new round
