@@ -1,0 +1,111 @@
+/*
+GUI Assignment: Homework 4
+Date: 12/14/2023
+Name: Alexander Vasquez Romero Jr
+Email: alexander_vasquez1@student.uml.edu
+Description: My hw5.css file, which is used to style and position elements that will be shown in index.html
+*/
+
+* { /* Global setting for margin and padding, because without it my elements start jumping around when my cursor hovers over the tiles */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { /* Styling and formatting for the body of the page */
+    font-family: Arial, sans-serif;
+    background: #852d2d;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/*
+cited:
+https://developer.mozilla.org/en-US/docs/Web/CSS/flex
+https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content
+https://developer.mozilla.org/en-US/docs/Web/CSS/align-content
+*/
+
+#board { /* Size of the board set up to cover 7 tiles hence 526x80*/
+    width: 526px; 
+    height: 80px;
+    background-size: cover;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+ #rack { /* Size of the rack set up to hold 7 tiles hence 526x80*/
+    width: 640px; 
+    height: 182px;
+    background-size: cover;
+    margin-bottom: 20px;
+    position: relative;
+}
+.tile {
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    position: absolute;
+    cursor: grab;
+    top: 50%;
+    left: 50%;
+    transform: translate(90%, -50%);
+}
+
+/*
+Cited:
+https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
+https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate
+https://www.w3schools.com/css/css_positioning.asp
+*/
+
+#board { /* Linking board image (single line version)*/
+    background-image: url('../Scrabble_Board_OneLine.png');
+}
+
+#rack { /* Linking rack image */
+    background-image: url('../scrabble-tile-holder-406774_640.png');
+}
+
+/*
+Cited:
+https://stackoverflow.com/questions/20047364/how-to-give-the-background-image-path-in-css
+*/
+
+#score, #moves { /* Styling for area where my score and moves are shown by the game logic */
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ff1414;
+    background: #fff;
+}
+
+button { /* Styling for buttons */
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover { /* When the user places a cursor over the Restart and New Round buttons, it gets lighter */
+    background: #555;
+}
+
+.tile:hover { /* When the user places a cursor over the tile, it is highlighted in green */
+    border: 2px solid #00ff95;
+}
+/*
+Cited:
+https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
+*/
+
+.board-square { /* styling for where the individual pieces will go */
+    width: 75px;
+    height: 75px;
+    position: absolute;
+}
